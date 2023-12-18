@@ -31,16 +31,6 @@ def _get_tbody_data(table):
 
     row_data = []
     for tr in table_rows:
-        # row = []
-
-        # row.append(tr.find("span", {"class": "rank-number"}).text)
-        # row.append(tr.a.span.text)
-
-        # divs = tr.find_all("div", {"class": "data-wrapper"})
-
-        # for div in divs:
-        #     row.append(div.span.text)
-
         row = {}
 
         row["rank"] = tr.find("span", {"class": "rank-number"}).text
