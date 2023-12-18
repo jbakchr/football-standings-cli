@@ -5,10 +5,15 @@ from standing import Standing
 from constants import LEAGUES
 
 
-parser = CLI()
-args = parser.get_parse_args()
+def main():
+    parser = CLI()
+    args = parser.get_parse_args()
 
-data = fetch_standing_data(LEAGUES[args.league])
+    data = fetch_standing_data(LEAGUES[args.league])
 
-standing = Standing(data)
-standing.show_standing()
+    standing = Standing(data)
+    standing.show_standing()
+
+
+if __name__ == "__main__":
+    main()
